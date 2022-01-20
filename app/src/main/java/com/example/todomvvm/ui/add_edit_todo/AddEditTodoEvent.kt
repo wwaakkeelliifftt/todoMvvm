@@ -1,0 +1,9 @@
+package com.example.todomvvm.ui.add_edit_todo
+
+import com.example.todomvvm.data.Todo
+
+sealed class AddEditTodoEvent {
+    data class OnTitleChange(val title: String): AddEditTodoEvent()
+    data class OnDescriptionChange(val description: String): AddEditTodoEvent()
+    object OnSaveTodoClick: AddEditTodoEvent()
+}
