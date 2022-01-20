@@ -64,7 +64,7 @@ fun TodoListScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable { viewModel.onEvent(TodoListEvent.OnTodoClick(todo = todoItem)) }
-                        .padding(16.dp)
+                        .padding(4.dp)
                 )
             }
         }

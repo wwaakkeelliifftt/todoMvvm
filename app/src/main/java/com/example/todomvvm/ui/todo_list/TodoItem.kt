@@ -27,7 +27,8 @@ fun TodoItem(
 ) {
     Row(
         modifier = modifier
-            .border(width = 2.dp, color = Color.LightGray, shape = RoundedCornerShape(8.dp)),
+            .border(width = 1.dp, color = Color.LightGray, shape = RoundedCornerShape(8.dp))
+            .padding(8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         IconButton(
@@ -36,8 +37,10 @@ fun TodoItem(
             },
             modifier = Modifier
                 .align(Alignment.CenterVertically)
+                .padding(8.dp)
                 .background(
-                    Color(158, 21, 21, 153)
+                    Color(158, 21, 21, 153),
+                    shape = RoundedCornerShape(8.dp)
                 )
         ) {
             Icon(
@@ -54,14 +57,14 @@ fun TodoItem(
         ) {
             Text(
                 text = todo.title,
-                fontSize = 20.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.Bold
             )
             todo.description?.let {
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
                     text = it,
-                    fontSize = 14.sp,
+                    fontSize = 11.sp,
                     fontWeight = FontWeight.Normal
                 )
             }
